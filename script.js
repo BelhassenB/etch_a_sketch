@@ -14,7 +14,7 @@ for (let i=0; i<256; i++) {
 const hoverSquares = document.querySelectorAll('.squares')
 hoverSquares.forEach(square => {
     square.addEventListener("mousemove", () => {
-        square.style.backgroundColor = "red"
+        square.style.backgroundColor = "yellow"
     })
     
 })
@@ -23,8 +23,12 @@ const btn = document.createElement('button')
 btn.textContent = "ALERT ME"
 body.insertBefore(btn, mainDiv)
 
+
 btn.addEventListener('click', () => {
-    const gridNum = prompt('enter the number of grids')
-    console.log(gridNum)
-})
+    let gridNum = prompt('Enter the number of grids (MAX 100)', "");
+    while (isNaN(gridNum) || gridNum > 100) {
+        gridNum = prompt('Enter the number of grids (MAX 100)', "");
+    }
+    console.log(`Your number is: ${gridNum}`);
+});
 
