@@ -1,4 +1,5 @@
 body {
+    background-color: black;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -6,23 +7,23 @@ body {
 }
 
 #main-container {
-    border: 1px yellow solid;
-    width: auto;
-    height: auto;
+    border: 2px white solid;
+    width: 700px;
+    height: 500px;
     display: flex;
     flex-wrap: wrap;
-    margin-top: 50px;
+    margin: 50px 50px 0 50px;
+    border-radius: 20px;
 
     
 }
 
 .squares {
-    
-    aspect-ratio: 2/1;
-    flex: 1 0 6%;     
+     
     box-sizing: border-box;
-    height: 30px;
-    width: 5px;
+    height: 31.25px;
+    width: 43.75px;
+
     
 }
 
@@ -32,4 +33,5 @@ button {
     width: 100px;
     background-color: black;
     color: white;
+    border: 1px white solid;
 }
