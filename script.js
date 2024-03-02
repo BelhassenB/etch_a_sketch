@@ -5,20 +5,27 @@ body.appendChild(mainDiv)
 
 
 
-for (let i=0; i<256; i++) {
+
+const firstGrid = () => {for (let i=0; i<256; i++) {
     const squares = document.createElement('div')
     squares.setAttribute('class', 'squares')
     mainDiv.appendChild(squares)
    
 
-}
+}}
+firstGrid()
 const hoverSquares = document.querySelectorAll('.squares')
+
 
 
 function hovering (container){    
     container.forEach(square => {
+    const rgbRed = Math.floor(Math.random()*255)
+    const rgbGreen = Math.floor(Math.random()*255)
+    const rgbBlue = Math.floor(Math.random()*255)
+    
     square.addEventListener("mousemove", () => {
-        square.style.backgroundColor = "yellow"
+        square.style.backgroundColor = `rgb(${rgbRed},${rgbGreen},${rgbBlue})`
     })
     
 })}
@@ -31,6 +38,17 @@ btn.style.fontWeight = "bold"
 btn.style.fontSize = "18px"
 btn.style.width = "max-content"
 body.insertBefore(btn, mainDiv)
+
+// const resetBtn = document.createElement('button')
+// body.appendChild(resetBtn)
+// resetBtn.textContent = "Reset"
+// resetBtn.style.fontWeight = "bold"
+// resetBtn.style.fontSize = "18px"
+// resetBtn.style.width = "max-content"
+// resetBtn.addEventListener("click", () => {
+    
+// body.replaceChild(body.children[1], mainDiv)})
+
 
 
 function newGrid (){
