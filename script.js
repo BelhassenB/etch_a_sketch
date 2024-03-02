@@ -27,6 +27,7 @@ function hovering (container){
     square.addEventListener("mousemove", () => {
         square.style.backgroundColor = `rgb(${rgbRed},${rgbGreen},${rgbBlue})`
     })
+
     
 })}
 hovering(hoverSquares)
