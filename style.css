@@ -14,15 +14,20 @@ body {
     flex-wrap: wrap;
     margin: 50px 50px 0 50px;
     border-radius: 20px;
+    
+    
 
     
 }
 
 .squares {
-     
+    flex-grow: 1;
     box-sizing: border-box;
     height: 31.25px;
     width: 43.75px;
+    border-radius: 20px;
+    border: 1px white solid;
+      
 
     
 }
